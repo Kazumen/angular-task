@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div fxLayout="column" fxLayoutAlign="center center" class="mat-primary" fxLayoutGap="20px" >
+  <h1 class="mat-display-1" fxFlexOffset="1">Welcome!</h1>
+  <div class="gif-container" fxLayout="column" fxLayoutAlign="space-around" fxFlexAlign="stretch" fxLayout.gt-sm="row" (click)="musicChange(ref)">
+    <a fxFlex="20">
+      <img src="https://media.tenor.com/lYLDkRGPHzQAAAAi/toothless-dancing.gif" alt="">
+    </a>
+    <a fxFlex="20">
+      <img src="https://i.pinimg.com/originals/91/a0/c0/91a0c0c7daf2eb978b1a893c068d2bde.gif" alt="">
+    </a>
+  </div>
+  <a fxFlex="flex" fxFlexAlign="center">
+    <img src="https://media1.giphy.com/media/11lxCeKo6cHkJy/200w.gif?cid=6c09b952qp4lp19xsox0cln7jvkclz1ksq0ygvbi833aojly&ep=v1_gifs_search&rid=200w.gif&ct=g" alt="">
+  </a>
+  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" mat-raised-button>Get prize</a>
+</div>
+<audio #ref id="audio" [volume]="0.15" [loop]="true"
+       src="https://muzor.net/uploads/music/2024/01/pokemon-black-white-driftveil-city-mp3.mp3"></audio>
