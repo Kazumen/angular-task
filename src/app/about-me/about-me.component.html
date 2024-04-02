@@ -1,0 +1,43 @@
+<div fxLayout="column" fxLayoutAlign="center" class="container">
+  <h2 fxLayoutAlign="center" fxFlexOffset="10">About Me</h2>
+  <div class="container" *ngIf="!(isDefault$ | async); else template">
+    <div fxFlex="20" fxHide.xs></div>
+    <div fxFlex.xs="100" fxFlex="60">
+      <mat-card class="card" *ngIf="person$ | async as person">
+        <mat-card-content>
+          <mat-list >
+            <h3 mat-subheader>Name</h3>
+            <mat-list-item>
+              <h4 mat-line>{{person.userName}}</h4>
+              <mat-divider></mat-divider>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <h3 mat-subheader>Surname</h3>
+            <mat-list-item>
+              <h4 mat-line>{{person.userSurname}}</h4>
+              <mat-divider></mat-divider>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <h3 mat-subheader>Email</h3>
+            <mat-list-item>
+              <h4 mat-line>{{person.email}}</h4>
+              <mat-divider></mat-divider>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <h3 mat-subheader>Address</h3>
+            <mat-list-item>
+              <h4 mat-line>{{person.address}}</h4>
+              <mat-divider></mat-divider>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div fxFlex="20" fxHide.xs></div>
+  </div>
+</div>
+<ng-template #template>
+  <div fxLayout="column" fxLayoutAlign="center center" fxFlexOffset="10">
+    <h1>There is no information about me</h1>
+  </div>
+</ng-template>

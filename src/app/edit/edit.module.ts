@@ -10,23 +10,29 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {MatInputModule} from "@angular/material/input";
 import {MatButtonModule} from "@angular/material/button";
+import {MatDividerModule} from "@angular/material/divider";
+import {MatLineModule} from "@angular/material/core";
+import {MatListModule} from "@angular/material/list";
 
 
 @NgModule({
     declarations: [
         EditComponent
     ],
-  imports: [
-    CommonModule,
-    EditRoutingModule,
-    HttpClientModule,
-    MatCardModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    FlexLayoutModule,
-    MatInputModule,
-    MatButtonModule,
-  ]
+    imports: [
+        CommonModule,
+        EditRoutingModule,
+        HttpClientModule,
+        MatCardModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        FlexLayoutModule,
+        MatInputModule,
+        MatButtonModule,
+        MatDividerModule,
+        MatLineModule,
+        MatListModule,
+    ]
 })
 export class EditModule {
 }

@@ -13,15 +13,14 @@ import {Router} from "@angular/router";
 })
 export class EditComponent implements OnInit {
   personForm: FormGroup;
-  @Select(PersonState) person$: Observable<PersonStateModel> | undefined
+  @Select(PersonState.person) person$: Observable<PersonStateModel> | undefined
 
   constructor(private formBuilder: FormBuilder, private store: Store,private router: Router) {
     this.personForm = this.formBuilder.group({
       userName: '',
       userSurname: '',
       email:'',
-      address:'',
-      photo:''
+      address:''
     });
   }
 

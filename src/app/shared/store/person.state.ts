@@ -1,36 +1,49 @@
-import {Action, State, StateContext} from '@ngxs/store';
+import {Action, Selector, State, StateContext} from '@ngxs/store';
 import {Injectable} from "@angular/core";
 import {SetPerson} from "./person.actions";
 
 export interface PersonStateModel {
-    userName: string;
-    userSurname: string;
-    email: string;
-    address: string;
+  userName: string,
+  userSurname: string,
+  email: string,
+  address: string,
+  default: boolean
 }
 
 @State<PersonStateModel>({
-    name: 'person',
-    defaults: {
-        userName: '',
-        userSurname: '',
-        email: '',
-        address: '',
-    }
+  name: 'person',
+  defaults: {
+    userName: '',
+    userSurname: '',
+    address: '',
+    email: '',
+    default: true
+  }
 })
 @Injectable()
 export class PersonState {
-    @Action(SetPerson)
-    setPerson({patchState}: StateContext<PersonStateModel>, {payload}:SetPerson){
-        patchState({
-            userName:payload.userName,
-            userSurname:payload.userSurname,
-            email:payload.email,
-            address:payload.address
-        })
-    }
+  @Selector()
+  static person(state: PersonStateModel) {
+    return state;
+  }
 
-    constructor() {
-    }
+  @Selector()
+  static isDefault(state: PersonStateModel): boolean {
+    return state.default;
+  }
 
+
+  @Action(SetPerson)
+  setPerson({patchState}: StateContext<PersonStateModel>, {payload}: SetPerson) {
+    patchState({
+      userName: payload.userName,
+      userSurname: payload.userSurname,
+      address: payload.address,
+      email: payload.email,
+      default: false
+    });
+  }
+
+  constructor() {
+  }
 }
