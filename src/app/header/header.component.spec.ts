@@ -1,6 +1,7 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {MaterialModule} from "../shared/material/material.module";
 
-import { HeaderComponent } from './header.component';
+import {HeaderComponent} from './header.component';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -8,9 +9,12 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
+      declarations: [HeaderComponent],
+      imports:[
+        MaterialModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;

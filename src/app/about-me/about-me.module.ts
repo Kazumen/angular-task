@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MaterialModule} from "../shared/material/material.module";
 
 import { AboutMeRoutingModule } from './about-me-routing.module';
 import { AboutMeComponent } from './about-me.component';
@@ -17,9 +18,7 @@ import {MatIconModule} from "@angular/material/icon";
     CommonModule,
     AboutMeRoutingModule,
     FlexLayoutModule,
-    MatListModule,
-    MatCardModule,
-    MatIconModule
+    MaterialModule
   ]
 })
 export class AboutMeModule { }
