@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import {NgxsModule, Store} from "@ngxs/store";
 import {MaterialModule} from "../shared/material/material.module";
-import {PersonState} from "../shared/store/person.state";
+import {PersonState} from "../shared/store/person/person.state";
 
 import { AboutMeComponent } from './about-me.component';
 

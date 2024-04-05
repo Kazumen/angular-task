@@ -3,8 +3,8 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {NgxsModule, Store} from "@ngxs/store";
 import {MaterialModule} from "../shared/material/material.module";
-import {SetPerson} from "../shared/store/person.actions";
-import {PersonState, PersonStateModel} from "../shared/store/person.state";
+import {SetPerson} from "../shared/store/person/person.actions";
+import {PersonState, PersonStateModel} from "../shared/store/person/person.state";
 
 import { EditComponent } from './edit.component';
 

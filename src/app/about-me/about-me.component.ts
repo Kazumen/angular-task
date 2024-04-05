@@ -1,21 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import {Select, Store} from "@ngxs/store";
-import {PersonState, PersonStateModel} from "../shared/store/person.state";
-import {Observable} from "rxjs";
+import {Component} from '@angular/core';
+import {PersonService} from "../shared/store/person/person.service";
 
 @Component({
   selector: 'app-about-me',
   templateUrl: './about-me.component.html',
   styleUrls: ['./about-me.component.scss']
 })
-export class AboutMeComponent implements OnInit {
-  @Select(PersonState.person) person$: Observable<PersonStateModel> | undefined;
-  @Select(PersonState.isDefault) isDefault$: Observable<boolean> | undefined
-  constructor(private store: Store) {
-  }
-
-  ngOnInit(): void {
-
-  }
+export class AboutMeComponent {
+  constructor(protected personService: PersonService) {}
 
 }

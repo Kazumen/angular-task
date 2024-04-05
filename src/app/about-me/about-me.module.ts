@@ -1,14 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import {MaterialModule} from "../shared/material/material.module";
+import { CommonModule } from '@angular/common'
+import { NgModule } from '@angular/core'
 
-import { AboutMeRoutingModule } from './about-me-routing.module';
-import { AboutMeComponent } from './about-me.component';
-import {FlexLayoutModule} from "@angular/flex-layout";
-import {MatListModule} from "@angular/material/list";
-import {MatCardModule} from "@angular/material/card";
-import {MatIconModule} from "@angular/material/icon";
-
+import { FlexLayoutModule } from '@angular/flex-layout'
+import { MaterialModule } from '../shared/material/material.module'
+import { AboutMeRoutingModule } from './about-me-routing.module'
+import { AboutMeComponent } from './about-me.component'
 
 @NgModule({
   declarations: [
@@ -21,4 +17,5 @@ import {MatIconModule} from "@angular/material/icon";
     MaterialModule
   ]
 })
-export class AboutMeModule { }
+export class AboutMeModule {
+}

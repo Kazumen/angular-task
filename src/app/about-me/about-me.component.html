@@ -1,9 +1,9 @@
 <div fxLayout="column" fxLayoutAlign="center" class="container">
   <h2 fxLayoutAlign="center" fxFlexOffset="10">About Me</h2>
-  <div class="container" *ngIf="!(isDefault$ | async); else template">
+  <div class="container" *ngIf="!(personService.isDefault$ | async); else template" >
     <div fxFlex="20" fxHide.xs></div>
     <div fxFlex.xs="100" fxFlex="60">
-      <mat-card class="card" *ngIf="person$ | async as person">
+      <mat-card class="card" *ngIf="personService.person$ | async as person">
         <mat-card-content>
           <mat-list >
             <h3 mat-subheader>Name</h3>

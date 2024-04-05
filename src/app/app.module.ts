@@ -1,8 +1,6 @@
 import {HttpClientModule} from "@angular/common/http";
 import {NgModule} from '@angular/core';
 import {FlexLayoutModule} from "@angular/flex-layout";
-import {MatButtonModule} from "@angular/material/button";
-import {MatToolbarModule} from "@angular/material/toolbar";
 import {BrowserModule} from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgxsReduxDevtoolsPluginModule} from "@ngxs/devtools-plugin";
@@ -13,7 +11,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {MaterialModule} from "./shared/material/material.module";
-import {PersonState} from "./shared/store/person.state";
+import {PersonState} from "./shared/store/person/person.state";
 
 @NgModule({
   declarations: [
